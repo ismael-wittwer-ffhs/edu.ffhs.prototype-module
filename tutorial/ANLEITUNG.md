@@ -4,7 +4,7 @@
 
 ### 1. Cursor herunterladen und installieren
 
-1. Öffne [cursor.sh](https://cursor.sh/) und lade den Installer für Windows herunter.
+1. Öffne [cursor.com/download](https://cursor.com/download) und lade den Installer für Windows herunter.
 2. Starte die Installation (Standard-Optionen sind in der Regel okay).
 3. Öffne Cursor nach der Installation.
 
@@ -20,7 +20,7 @@
 
 ### 3. Git für Windows installieren
 
-1. Lade [Git for Windows](https://git-scm.com/download/win) herunter.
+1. Lade [Git for Windows](https://git-scm.com/install/windows) herunter.
 2. Installer starten. Empfohlene Auswahl:
    - *Use Git from the command line and also from 3rd-party software*
    - *Use bundled OpenSSH*
