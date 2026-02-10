@@ -30,6 +30,7 @@ Transform the raw source files in `src/input/` into clean, structured markdown f
    - Preserve lists, tables, code blocks, and emphasis where present in the source.
    - If the source contains images, note them as `<!-- image: description -->` placeholders.
    - Do **not** invent content — only restructure and format what exists in the source.
+   - Keep the language of the source material. Do **not** translate content.
 
 5. **Do not overwrite** existing files in `src/output/` unless the user explicitly asks to regenerate.
 

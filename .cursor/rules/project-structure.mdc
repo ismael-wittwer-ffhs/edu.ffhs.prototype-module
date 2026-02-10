@@ -1,0 +1,32 @@
+---
+description: Projektstruktur, Dateihandhabung und Regeln zur Quellentransformation.
+alwaysApply: true
+---
+
+# Projektstruktur
+
+## Ordneraufbau
+
+| Pfad | Zweck |
+|---|---|
+| `src/input/` | Rohes Quellmaterial (PDFs, DOCX usw.) — von Cursor-Indexierung ausgeschlossen |
+| `src/output/` | Verarbeitetes Markdown aus dem Quellmaterial |
+| `content/block-N/` | Finale Kursinhalte pro Block (N = 1–5) |
+| `content/exams/` | Prüfungs- und Bewertungsmaterial |
+| `content/modulplan.md` | Modulplan — die einzige verbindliche Quelle für Blockthemen |
+| `scripts/` | Hilfsskripte (Konverter, Validatoren usw.) |
+
+## Zentrale Regeln
+
+- `content/modulplan.md` ist das **massgebliche Dokument** für die Modulstruktur. Immer zuerst konsultieren, bevor Block-Inhalte erstellt oder geändert werden.
+- Quellmaterial in `src/input/` ist **schreibgeschützter Kontext**. Diese Dateien nie direkt im Output ändern oder referenzieren — die verarbeiteten Versionen in `src/output/` verwenden.
+- Keine Dateien ausserhalb der bestehenden Ordnerstruktur anlegen, ohne zu fragen.
+- Kebab-Case für alle Datei- und Ordnernamen. Zweistellige, nullgepolsterte Präfixe zur Sortierung.
+
+## Quellentransformation
+
+Bei der Transformation von Quellen (`src/input/` → `src/output/`):
+
+- Originalinformationen originalgetreu bewahren — umstrukturieren und formatieren, nicht umschreiben oder zusammenfassen.
+- Bild-Platzhalter: `<!-- image: Beschreibung -->`.
+- Bestehende Dateien in `src/output/` nie überschreiben, es sei denn, der User verlangt ausdrücklich eine Neugenerierung.

@@ -1,0 +1,38 @@
+---
+description: Arbeitsmodus — wie die KI Aufgaben angeht, Arbeit plant und Fortschritt kommuniziert.
+alwaysApply: true
+---
+
+# Arbeitsmodus
+
+## Erst denken, dann handeln
+
+- **Zuerst lesen, dann schreiben.** Lies immer alle relevanten Dateien, bevor du Änderungen vornimmst. Niemals Dateiinhalte annehmen.
+- **Bei Unklarheit nachfragen.** Wenn eine Anfrage mehrdeutig ist, stelle eine gezielte Rückfrage, bevor du loslegst. Nicht raten.
+- **Mehrstufige Arbeiten planen.** Bei Aufgaben, die mehr als zwei Dateien betreffen, skizziere kurz den Plan, bevor du ausführst.
+
+## Minimale Änderungen
+
+- Ändere nur das, was zur Erfüllung der Anfrage nötig ist. Kein Refactoring, keine Umstrukturierung, keine „Verbesserungen", es sei denn, dies wird ausdrücklich verlangt.
+- Nie Platzhalterinhalte generieren, die der User nachher löschen muss.
+- Bestehende Dateien bearbeiten statt neue erstellen.
+
+## Qualitätsprüfung
+
+Bevor eine Aufgabe als erledigt gilt:
+
+1. **Struktur prüfen** — Dateinamen, Ordnerpfade und Überschriftenhierarchie entsprechen den Projektkonventionen.
+2. **Vollständigkeit prüfen** — keine verwaisten Platzhalter (`[…]`), es sei denn, sie sind bewusst für den User belassen.
+3. **Konsistenz prüfen** — Terminologie, Formatierung und Stil stimmen mit bestehenden Inhalten im Repository überein.
+
+## Kommunikation
+
+- Nach Abschluss einer Aufgabe: kurze Zusammenfassung, was sich wo geändert hat.
+- Wenn etwas nicht möglich ist (z. B. fehlendes Quellmaterial), dies explizit sagen und nächste Schritte vorschlagen.
+- Niemals stillschweigend Teile einer Anfrage überspringen.
+
+## Sicherheit
+
+- **Dateien nie überschreiben**, ohne gefragt zu werden oder ohne vorherige Bestätigung.
+- **Nie akademische Inhalte erfinden.** Bei fehlendem Quellmaterial explizite Platzhalter verwenden und diese kennzeichnen.
+- **Dateien nie löschen**, es sei denn, der User verlangt es ausdrücklich.

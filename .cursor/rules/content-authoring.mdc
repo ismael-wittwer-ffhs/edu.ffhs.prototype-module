@@ -1,0 +1,34 @@
+---
+description: Regeln für die Erstellung von Kursinhalten (Blöcke, Prüfungen, Quizzes).
+globs: content/**
+alwaysApply: false
+---
+
+# Inhaltserstellung
+
+## Didaktische Grundsätze
+
+- Jeder Block umfasst einen **Gesamtaufwand von ~30 Stunden** (Vorbereitung + 3 h Präsenz + Nachbereitung).
+- Lernziele stehen an erster Stelle — jede Aufgabe muss auf mindestens ein Lernziel rückführbar sein.
+- Verwende Bloom'sche Taxonomie-Verben für Lernziele (kennen, verstehen, anwenden, analysieren, evaluieren, erschaffen).
+- Aufgabentypen innerhalb jedes Blocks variieren: Leseaufträge, Forumsdiskussionen, Quizzes und Abgaben.
+
+## Inhaltliche Integrität
+
+- **Alle Inhalte aus den Quellen ableiten** in `src/output/` und `content/modulplan.md`. Nie Fakten, Definitionen oder Beispiele erfinden.
+- Bei unzureichendem Quellmaterial einen expliziten Platzhalter einfügen: `<!-- TODO: Quelle fehlt — [Beschreibung] -->` und in der Zusammenfassung darauf hinweisen.
+- Antwortoptionen bei Quizfragen müssen plausibel sein. Immer die Lösung mit kurzer Begründung angeben.
+
+## Formatierungsstandards
+
+- ATX-Überschriften verwenden (`#`, `##`, `###`).
+- Ein Satz pro Zeile (für saubere Diffs).
+- Zeitschätzungen in Klammern nach jeder Aufgabenüberschrift: `*(geschätzte Zeit: X h)*` oder `*(geschätzte Zeit: X min)*`.
+- Tabellen mit führenden und abschliessenden Pipes und ausgerichteten Trennzeichen.
+- Keine nachgestellten Leerzeichen. Keine aufeinanderfolgenden Leerzeilen.
+
+## Dateinamen
+
+- Block-Inhaltsdateien: `content/block-N/block-N.md`.
+- Ergänzende Dateien im Block-Ordner verwenden Kebab-Case mit zweistelligem Präfix: `01-uebung-titel.md`.
+- Prüfungsdateien gehören unter `content/exams/`.
