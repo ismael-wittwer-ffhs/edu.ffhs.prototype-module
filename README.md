@@ -42,6 +42,13 @@ Enthält die verarbeiteten Markdown-Versionen der Eingabequellen. Diese dienen a
 ### `content/block-[1-5]/`
 Die fünf Blöcke des Kurses. Jeder Unterordner enthält den finalen, strukturierten Inhalt für den jeweiligen Block (Lernziele, Übungen, Leistungsnachweise usw.).
 
+## Sicherheit
+
+- **Kein vertrauliches Material ins Remote-Repository pushen.** Der Ordner `src/input/` kann urheberrechtlich geschütztes oder vertrauliches Quellmaterial enthalten. Stellen Sie sicher, dass dieser Ordner in der `.gitignore` aufgeführt ist, bevor Sie das Repository auf einen Remote-Server pushen.
+- **Keine personenbezogenen Daten committen.** Namen, E-Mail-Adressen oder andere personenbezogene Daten von Studierenden oder Dozierenden gehören nicht ins Repository.
+- **Keine Credentials oder Secrets einchecken.** API-Keys, Passwörter, Tokens und ähnliche Geheimnisse nie in Dateien im Repository ablegen. Verwenden Sie Umgebungsvariablen oder einen Secret-Manager.
+- **`.gitignore` pflegen.** Ergänzen Sie die `.gitignore` um alle Dateien und Ordner, die nicht versioniert werden sollen (z. B. lokale Konfigurationsdateien, Build-Artefakte, IDE-Einstellungen).
+
 ## Anleitung zur Anpassung dieses Templates
 
 1. **Alle `[Platzhalter]`** in dieser README durch die tatsächlichen Modulangaben ersetzen.
