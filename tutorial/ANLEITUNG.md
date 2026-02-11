@@ -33,7 +33,7 @@ git --version
 
 Wenn eine Versionsnummer erscheint, ist Git korrekt installiert.
 
-### 4. Optional: GitHub-Account erstellen
+### 4. GitHub-Account erstellen
 
 Falls du noch keinen GitHub-Account hast:
 
@@ -77,8 +77,6 @@ Beim ersten GitHub-Login kann ein **Device Activation**-Dialog erscheinen (Brows
 2. Repo-URL einfügen (HTTPS oder SSH).
 3. Zielordner wählen.
 
----
-
 ## Schnellstart
 
 1. Repository öffnen: **File → Open Folder** → Projektordner auswählen.
@@ -86,8 +84,6 @@ Beim ersten GitHub-Login kann ein **Device Activation**-Dialog erscheinen (Brows
 3. `content/modulplan.md` mit der Modulstruktur befüllen — dieses Dokument steuert alles Weitere.
 4. Quellmaterial in `src/input/` ablegen.
 5. Cursor-Commands nutzen, um Quellen zu transformieren und Kursinhalte zu generieren.
-
----
 
 ## Projektstruktur
 
@@ -119,8 +115,6 @@ Beim ersten GitHub-Login kann ein **Device Activation**-Dialog erscheinen (Brows
 | Prüfungen | `content/exams/` | — |
 | Hilfsskripte | `scripts/` | — |
 
----
-
 ## Cursor-Commands ausführen
 
 Commands sind vordefinierte Prompts, die im Ordner `.cursor/commands/` liegen.
@@ -149,8 +143,6 @@ Commands sind vordefinierte Prompts, die im Ordner `.cursor/commands/` liegen.
 4. Command "Moodle-Kurs erstellen" ausführen  → erzeugt content/block-N/block-N.md
 5. Inhalte manuell prüfen und verfeinern
 ```
-
----
 
 ## Project Rules anpassen
 
@@ -186,16 +178,12 @@ globs: content/**       # Optional: Dateimuster, bei denen die Regel gilt
 
 Der Inhalt darunter ist Markdown und wird von Cursor als Anweisung an die KI übergeben.
 
----
-
 ## Neue Commands erstellen
 
 1. Erstelle eine neue `.md`-Datei unter `.cursor/commands/`.
 2. Der Dateiname wird zum Command-Namen (Kebab-Case empfohlen).
 3. Schreibe die Anweisungen in Markdown — diese werden als Prompt an die KI übergeben.
 4. Der Command erscheint danach in der `/`-Befehlsliste im Chat.
-
----
 
 ## Git-Workflow
 
@@ -255,8 +243,6 @@ Die Dateien in `src/input/` sind via `.cursorignore` von der Cursor-Indexierung 
 Sie werden also von der KI nicht gelesen und nicht in Suchergebnissen berücksichtigt.
 Im Git-Repository sind sie aber weiterhin enthalten und werden normal committet.
 
----
-
 ## Änderungen annehmen oder ablehnen
 
 Wenn Cursor Dateien bearbeitet, werden die Änderungen nicht sofort übernommen — du behältst die Kontrolle.
@@ -264,6 +250,8 @@ Wenn Cursor Dateien bearbeitet, werden die Änderungen nicht sofort übernommen 
 ### Im Editor (Inline-Diff)
 
 Nach einer KI-Bearbeitung zeigt Cursor die Änderungen als farbigen Diff direkt in der Datei an (grün = neu, rot = entfernt).
+
+![Inline-Diff nach einer KI-Bearbeitung](resources/cursor_inline_diff.png)
 
 - **Einzelne Änderung annehmen:** Klicke auf **Accept** neben dem jeweiligen Diff-Block.
 - **Einzelne Änderung ablehnen:** Klicke auf **Reject** — die Datei bleibt im Originalzustand.
@@ -278,8 +266,6 @@ Hat Cursor mehrere Dateien gleichzeitig bearbeitet, erscheint in der oberen Leis
 
 Hast du eine Änderung bereits angenommen, kannst du sie über `Ctrl+Z` (Undo) im jeweiligen Editor rückgängig machen, solange die Datei noch offen ist.
 
----
-
 ## Tipps für die Arbeit mit Cursor
 
 - **Chat-Kontext einschränken:** Verwende `@`-Referenzen, um Cursor auf bestimmte Dateien oder Ordner zu lenken (z. B. `@content/modulplan.md`).
@@ -289,3 +275,16 @@ Hast du eine Änderung bereits angenommen, kannst du sie über `Ctrl+Z` (Undo) i
 - **Markdown-Vorschau:** Öffne eine `.md`-Datei (z. B. `README.md` oder `modulplan.md`), dann Rechtsklick im Editor → **Open Preview**. Die Vorschau zeigt das gerenderte Markdown neben dem Quelltext.
 
 ![Markdown-Vorschau öffnen](resources/cursor_markdown_open_preview.png)
+
+## Warum Git statt Dropbox oder SharePoint?
+
+Ein Git-Repository sollte nicht direkt in Dropbox oder Microsoft SharePoint liegen, weil diese Dienste Dateien im Hintergrund synchronisieren, während Git intern komplexe Versions- und Transaktionsprozesse nutzt.
+
+Typische Probleme sind:
+
+- «Conflicted copies» bei gleichzeitigen Änderungen
+- Beschädigte `.git`-Strukturen durch laufende Synchronisation während eines Commits/Rebases
+- Datei-Sperren oder geänderte Metadaten (besonders bei SharePoint/OneDrive)
+- Inkonsistente Repository-Zustände, die später schwer zu reparieren sind
+
+Besser ist es, das Repository lokal zu speichern und für Zusammenarbeit eine Git-Plattform wie GitHub oder GitLab zu verwenden.

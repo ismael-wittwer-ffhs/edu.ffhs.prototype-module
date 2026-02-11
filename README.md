@@ -1,52 +1,52 @@
-# [Module Name] — FFHS
+# [Modulname] — FFHS
 
-> **Prototype Module Repository**
-> This is the template repository for creating new FFHS course modules. Replace the bracketed placeholders with your actual module information before use.
+> **Prototyp-Modul-Repository**
+> Dies ist das Template-Repository für die Erstellung neuer FFHS-Kursmodule. Ersetzen Sie die Platzhalter in eckigen Klammern durch Ihre tatsächlichen Modulinformationen, bevor Sie das Template verwenden.
 
-## Module Summary
+## Modulzusammenfassung
 
-`[Put your module summary here.]`
+`[Modulzusammenfassung hier einfügen.]`
 
-## Module Overview
+## Modulübersicht
 
-| Field            | Value                          |
+| Feld             | Wert                           |
 |------------------|--------------------------------|
-| Module Code      | `[e.g. PCG]`              |
-| Module Name      | `[e.g. Programming in C# for Games]`  |
-| ECTS             | `[e.g. 5]`                    |
-| Semester         | `[e.g. HS 2026]`              |
-| Responsible      | `[Name]`                      |
+| Modulkürzel      | `[z. B. PCG]`                  |
+| Modulname        | `[z. B. Programming in C# for Games]` |
+| ECTS             | `[z. B. 5]`                    |
+| Semester         | `[z. B. HS 2026]`             |
+| Verantwortlich   | `[Name]`                       |
 
-## Folder Structure
+## Ordnerstruktur
 
 ```
 ├── src/
-│   ├── input/          # Raw source material (PDFs, text files, etc.)
-│   └── output/         # Processed markdown output from source material
+│   ├── input/          # Rohes Quellmaterial (PDFs, Textdateien usw.)
+│   └── output/         # Verarbeitetes Markdown aus dem Quellmaterial
 ├── content/
-│   ├── block-1/        # Block 1 course content
-│   ├── block-2/        # Block 2 course content
-│   ├── block-3/        # Block 3 course content
-│   ├── block-4/        # Block 4 course content
-│   ├── block-5/        # Block 5 course content
-│   └── exams/          # Exam materials
-├── scripts/                # Helper scripts (Moodle transformers, markdown-to-PDF, etc.)
+│   ├── block-1/        # Kursinhalt Block 1
+│   ├── block-2/        # Kursinhalt Block 2
+│   ├── block-3/        # Kursinhalt Block 3
+│   ├── block-4/        # Kursinhalt Block 4
+│   ├── block-5/        # Kursinhalt Block 5
+│   └── exams/          # Prüfungsmaterial
+├── scripts/                # Hilfsskripte (Moodle-Transformer, Markdown-zu-PDF usw.)
 ```
 
 ### `src/input/`
-Place all raw source materials here — PDFs, Word documents, text files, or any other input that needs to be processed. This folder is excluded from Cursor indexing (via `.cursorignore`).
+Hier kommt das gesamte Rohquellmaterial hin — PDFs, Word-Dokumente, Textdateien oder andere Eingaben, die verarbeitet werden müssen. Dieser Ordner ist von der Cursor-Indexierung ausgeschlossen (via `.cursorignore`).
 
 ### `src/output/`
-Contains the processed markdown versions of the input sources. These serve as the intermediate representation used to author the final course content.
+Enthält die verarbeiteten Markdown-Versionen der Eingabequellen. Diese dienen als Zwischenformat für die Erstellung der finalen Kursinhalte.
 
 ### `content/block-[1-5]/`
-The five blocks of the course. Each subfolder holds the final, structured content for that block (learning objectives, exercises, assessments, etc.).
+Die fünf Blöcke des Kurses. Jeder Unterordner enthält den finalen, strukturierten Inhalt für den jeweiligen Block (Lernziele, Übungen, Leistungsnachweise usw.).
 
-## How to Adapt This Template
+## Anleitung zur Anpassung dieses Templates
 
-1. **Replace all `[placeholders]`** in this README with your actual module details.
-2. **Rename the block folders** if your course uses different naming (e.g. `week-1`, `unit-1`). Adjust the structure above accordingly.
-3. **Add or remove blocks** if your course has more or fewer than five.
-4. **Drop source material** into `src/input/` and place processed output in `src/output/`.
-5. **Populate each `content/block-*/`** folder with the final teaching material for that block.
-6. **Delete this section** ("How to Adapt This Template") once the module is set up.
+1. **Alle `[Platzhalter]`** in dieser README durch die tatsächlichen Modulangaben ersetzen.
+2. **Block-Ordner umbenennen**, falls Ihr Kurs eine andere Benennung verwendet (z. B. `week-1`, `unit-1`). Die obige Struktur entsprechend anpassen.
+3. **Blöcke hinzufügen oder entfernen**, falls Ihr Kurs mehr oder weniger als fünf hat.
+4. **Quellmaterial** in `src/input/` ablegen und die verarbeitete Ausgabe in `src/output/` platzieren.
+5. **Jeden `content/block-*/`**-Ordner mit dem finalen Lehrmaterial für den jeweiligen Block befüllen.
+6. **Diesen Abschnitt löschen** («Anleitung zur Anpassung dieses Templates»), sobald das Modul eingerichtet ist.
